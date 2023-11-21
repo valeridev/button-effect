@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>button hover effect</title>
+        <style>
+            .three-d-button {
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                background-color: #975ab7;
+                border: none;
+                color: white;
+                padding: 300px 400px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 95px;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+                font-size: 150px;
+                margin-top: 70px;
+            }
+
+            .three-d-button .front,
+            .three-d-button .back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease;
+            }
+
+            .three-d-button .back {
+                transform: translateY(100%);
+            }
+
+            .three-d-button:hover .front {
+                transform: translateY(-100%);
+            }
+
+            .three-d-button:hover .back {
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="three-d-button">
+            <span class="back">HELLO 👋</span>
+        </button>
+    </body>
+
+</html>
